@@ -4,13 +4,35 @@ package com.mycompany.csc229_211review_lab02hw;
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Person
-	
-	// ToDo 2: Fix the resulting errors
-	
-	// ToDo 3: Add a field for GPA and create setter and getter
-	
-	// ToDo 4: Add comments to your code
+public class Student extends Person{
+    //Student is now a child class
+    private double GPA;
+    //add field for GPA
+    public Student(String name, short age) {
+        super(name, age);
+    }
+
+
+    public String getAddress() {
+        return null;
+    }
+
+
+    public void setAddress(String address) {
+
+    }
+
+//create setter and getter for GPA
+    public void setGPA(double GPA){
+        this.GPA = GPA;
+    }
+    public double GetGPA(){
+        return GPA;
+    }
+
+    //added toString as expected from ToDo 7
+    public String toString(){
+        return "Student "+getName()+", age "+getAge()+", GPA "+GetGPA();
+    }
 
 }
